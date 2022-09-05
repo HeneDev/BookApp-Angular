@@ -1,0 +1,26 @@
+.modal-header {}
+
+.label {
+  display: flex;
+  direction: ltr;
+}
+
+.form-control {
+  display: flex;
+  direction: ltr;
+}
+
+.list-group-item {
+  display: flex;
+  direction: ltr;
+}
+
+.modal-header {
+  display: flex;
+  direction: ltr;
+}
+
+.selected{
+  background-color: #1f6bff  !important;
+  color: white;
+}

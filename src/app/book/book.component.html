@@ -1,0 +1,40 @@
+<div class="modal-header">
+  <h4 class="modal-title">Book</h4>
+</div>
+<div class="modal-body" *ngIf="ready">
+  <form [formGroup]="bookForm" name="book_form">
+    <div class="row">
+      <div class="col-6 mt-3">
+        <div class="list-group">
+          <div (click)="setForm(book,selected)"  *ngFor="let book of books" id="demo" class="list-group-item"   style="cursor: pointer;" #selected>
+            <b>{{book?.title}}</b> by <b>{{book?.author}}</b>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group" hidden>
+          <label for="id" class="label">id</label>
+          <input type="text" class="form-control" id="id" aria-describedby="emailHelp" placeholder="id"
+            formControlName="id">
+        </div>
+        <div class="form-group">
+          <label for="title" class="label">Title</label>
+          <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Title"
+            formControlName="title">
+        </div>
+        <div class="form-group">
+          <label for="author" class="label">Author</label>
+          <input type="text" class="form-control" id="author" placeholder="Author" formControlName="author">
+        </div>
+        <div class="form-group">
+          <label for="description" class="label">Description</label>
+          <textarea type="text" class="form-control" id="description" rows="5" placeholder="Description"
+            formControlName="description"></textarea>
+        </div>
+        <button type="submit" class="btn btn-danger shadow-0 mt-2" (click)="delete()">Delete</button>
+        <button type="submit" class="btn btn-secondary mx-1 shadow-0 mt-2" (click)="update()">Save</button>
+        <button type="submit" class="btn btn-primary shadow-0 mt-2" (click)="saveNew()">Save New</button>
+      </div>
+    </div>
+  </form>
+</div>
