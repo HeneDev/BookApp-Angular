@@ -7,16 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { RootComponent } from './root.component';
 import { BookComponent } from './book/book.component';
 
-
-
-
-
 @NgModule({
   declarations: [
     RootComponent,
     BookComponent,
   ],
-
 
   imports: [
     BrowserModule,
