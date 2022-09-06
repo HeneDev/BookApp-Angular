@@ -7,10 +7,10 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class BookService   {
-  private readonly URL_CREATE_BOOK: string = 'https://buuttiapp-backend.herokuapp.com/api/books/add';
-  private readonly URL_FETCH_BOOKS: string = 'https://buuttiapp-backend.herokuapp.com/api/books';
-  private readonly URL_UPDATE_BOOK: string = 'https://buuttiapp-backend.herokuapp.com/api/books/update/';
-  private readonly URL_DELETE_BOOK: string = 'https://buuttiapp-backend.herokuapp.com/api/books/delete/';
+  private readonly URL_CREATE_BOOK: string = 'http://localhost:3001/api/books/add';
+  private readonly URL_FETCH_BOOKS: string = 'http://localhost:3001/api/books';
+  private readonly URL_UPDATE_BOOK: string = 'http://localhost:3001/api/books/update/';
+  private readonly URL_DELETE_BOOK: string = 'http://localhost:3001/api/books/delete/';
 
   constructor(private http: HttpClient, private router: Router) { }
 
